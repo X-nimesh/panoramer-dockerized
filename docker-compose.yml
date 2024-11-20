@@ -1,0 +1,21 @@
+services:
+  fe:
+    container_name: panoramer_fe
+    image: panoramer_fe
+    build:
+      context: ./panoramer
+      dockerfile: Dockerfile
+    ports:
+      - 5173:80
+    restart: always
+    depends_on:
+      - be
+  be:
+    container_name: panoramer_be
+    image: panoramer_be
+    build:
+      context: ./panoramer-api
+      dockerfile: Dockerfile
+    ports:
+      - 5000:5000
+    restart: always

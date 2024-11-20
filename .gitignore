@@ -1,0 +1,7 @@
+panoramer-api/__pycache__/
+panoramer-api/uploads/
+panoramer-api/venv/
+
+
+panoramer/dist
+panoramer/node_modules
